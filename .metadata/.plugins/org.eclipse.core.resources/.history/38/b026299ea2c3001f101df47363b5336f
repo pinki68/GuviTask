@@ -1,0 +1,10 @@
+package loopstatment;
+
+public class PurchaseAmount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

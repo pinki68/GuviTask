@@ -1,0 +1,34 @@
+package Demo;
+
+import java.util.Scanner;
+
+public class StudentGrad {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		//prompt the user enter marks
+		System.out.println("Enter the marks of the Student");
+		int marks = sc.nextInt();
+		
+		//the grade based on the marks
+		char grade;
+		if(marks >= 90) {
+			grade = 'A';
+		}else if(marks >= 70) {
+			grade = 'B';
+		}else if(marks >= 50) {
+			grade = 'D';
+		}else {
+			grade = 'E';
+		}
+		
+		//Deiplay the result
+		System.out.println("the grade of the student: " + grade);
+		
+		sc.close();
+
+	}
+
+}
