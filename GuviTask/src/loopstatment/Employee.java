@@ -1,25 +1,40 @@
-package oopstask1;
+package oopsProgramming;
 
-//subclass
-public class Employee extends Person1 {
+public class Employee implements Taxable {
 	
-	String employeeId;
-	double salary;
-	
-	//constructor
-	public Employee(String name,int age,String employeeId,double salary)
-	
-	{    
-		super(name,age); //initiaize the person1 attributes using super()
-		this.employeeId = employeeId;
-		this.salary = salary;
-		
-	}
-	
-	public static void main(String[] args) {
-		
-		Employee emp = new Employee("Siya",20,"E12345",60000.0);
-		System.out.println("Name: " + emp.name + "\nAge:" + emp.age +"\nEmployeeId:" + emp.employeeId + "\nSalary:" + emp.salary);
-	}
+	private int empId;
+    private String name;
+    private double salary;
+    
+    
+    public Employee(int empId, String name, double salary) {
+        this.empId = empId;
+        this.name = name;
+        this.salary = salary;
+    }
+    
+    @Override
+    public double calcTax() {
+        return salary * INCOME_TAX;
+    }
+
+    // Getters for employee details
+    public int getEmpId() {
+        return empId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+    
+    @Override
+    public String toString() {
+        return "Employee [empId=" + empId + ", name=" + name + ", salary=" + salary + "]";
+    
+ }
 
 }
